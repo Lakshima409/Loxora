@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Luxora Hotel Suite - Clerk Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0c4b33;
+            --primary-light: #1a6b4a;
+            --secondary: #d4af37;
+            --light: #f8f5f2;
+            --dark: #1a1a1a;
+            --radius: 4px;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            background-color: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .login-header {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .login-subtitle {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .login-body {
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--radius);
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(12, 75, 51, 0.1);
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            background-color: var(--secondary);
+            color: var(--dark);
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-dark);
+        }
+
+        .login-footer {
+            text-align: center;
+            padding: 15px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            font-size: 14px;
+        }
+
+        .login-footer a {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .input-icon {
+            position: relative;
+        }
+
+        .input-icon i {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            color: var(--primary);
+        }
+
+        .input-icon input {
+            padding-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo">Luxora<span>Hotel Suite</span></div>
+            <div class="login-subtitle">Clerk Login Portal</div>
+        </div>
+        <div class="login-body">
+            <form action="dashboard.html" method="post">
+                <div class="form-group input-icon">
+                    <i class="fas fa-user"></i>
+                    <input type="text" class="form-control" placeholder="Username" required>
+                </div>
+                <div class="form-group input-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" class="form-control" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn">Login</button>
+                </div>
+            </form>
+        </div>
+        <div class="login-footer">
+            Having trouble? <a href="#">Contact administrator</a>
+        </div>
+    </div>
+</body>
+</html>
